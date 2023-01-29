@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.stregatto{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+}
+
+.stregatto svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+}
+
+.testa{
+    z-index: 998;
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.eyes{
+    z-index: 1000;
+    position: absolute;
+    top: 54.2%;
+    left: 54.8%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+}
+
+.eye{
+    height: 4px;
+    width: 4px;
+    border-radius: 2px;
+    background-color: black;
+}
+
+.eye-left{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    transform: translate(-50%, -50%);
+}
+
+.eye-right{
+    position: absolute;
+    top: 32px;
+    left: 37px;
+    transform: translate(-50%, -50%);
+}
+
+.testa .testa-grab{
+    z-index: 999;
+}
+
+.corpo{
+    z-index: 500;
+    visibility: hidden;
+    transition: all 1s ease;
+}
+
+.visible{
+    visibility: visible;
+    animation: visible 1s linear;
+}
+
+@keyframes visible {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.hidden{
+    animation: hide 1s linear;
+    display: block;
+    visibility: hidden;
+}
+
+@keyframes hide {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+.active-stregatto{
+    cursor: grabbing;
+}
